@@ -16,7 +16,13 @@ function App() {
   }
 
   return (
-    <div className='App'>
+    <div
+      className='App'
+      onKeyDown={(e) => {
+        if (e.key === "Escape") {
+          setShowModal(false);
+        }
+      }}>
       <Navbar data={data} />
       <Users data={data} deleteItem={deleteItem} />;
       {showModal && (
