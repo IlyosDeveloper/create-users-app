@@ -9,10 +9,10 @@ function Users({ data, deleteItem }) {
 
   return (
     <main>
-      <div className='no-users'>{data.length ? "" : "No users"}</div>
+      <div className='no-users'>{data ? "" : "No users"}</div>
       <div className='userList'>
         <div className='userList-container container'>
-          {data.length &&
+          {data &&
             data.map((user) => {
               return (
                 <div key={user.id} className='card'>
